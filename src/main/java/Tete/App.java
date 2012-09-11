@@ -1,11 +1,20 @@
 package Tete;
 
-public class App 
+import java.util.HashMap;
+import java.util.Map;
+
+public class App
 {
     public static void main( String[] args )
     {
-        for ( int i = 0 ; i < 10 ; ++i ) {
-            System.out.println("I can see you ! " + i);
+        Map<String, String> myMap = new HashMap<>();
+
+        myMap.put("Hello", "World");
+        myMap.put("This", "isAValue");
+        myMap.put("Key", "Value");
+
+        for ( Map.Entry e : myMap.entrySet() ) {
+            System.out.println( e.getKey() + " : " + e.getValue() );
         }
     }
 }
