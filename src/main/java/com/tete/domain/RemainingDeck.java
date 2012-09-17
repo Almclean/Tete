@@ -2,14 +2,13 @@ package com.tete.domain;
 
 import java.util.Set;
 
-public class BurnDeck extends Deck {
+public class RemainingDeck extends Deck {
 
     private final Set<Card> cards;
-    private Value currentMax;
 
-    public BurnDeck(final Set<Card> cards) {
+    public RemainingDeck(final Set<Card> cards) {
         this.cards = cards;
-        this.currentMax = new Value();
+
     }
 
     @Override
@@ -24,7 +23,7 @@ public class BurnDeck extends Deck {
 
     @Override
     public Boolean canAddCardToCurrentDeck(final Card card) {
-        return card.getValue().compareTo(currentMax) <= 0;
+        return cards.contains(card);
     }
 
     @Override
