@@ -33,8 +33,16 @@ public class Card {
     }
 
     @Override
-    public boolean equals(Object rhs) {
+    public boolean equals(Object object) {
+        if (!(object instanceof Card)) {
+            return false;
+        }
+
+        final Card rhs = (Card) object;
         return new EqualsBuilder()
-                .
+                .append(this.action, rhs.action)
+                .append(this.suit, rhs.suit)
+                .append(this.value, rhs.value)
+                .isEquals();
     }
 }
