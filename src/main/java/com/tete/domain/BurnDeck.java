@@ -9,7 +9,7 @@ public class BurnDeck extends Deck {
 
     public BurnDeck(final Set<Card> cards) {
         this.cards = cards;
-        this.currentMax = new Value();
+        this.currentMax = Value.ACE;
     }
 
     @Override

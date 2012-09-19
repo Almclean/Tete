@@ -5,24 +5,6 @@ import java.util.Set;
 
 public abstract class Deck {
 
-    public enum Suit {
-        SPADE("S"),
-        CLUB("C"),
-        DIAMOND("D"),
-        HEART("H");
-
-        private final String suit;
-
-        Suit(String suit) {
-            this.suit = suit;
-        }
-
-        @Override
-        public String toString() {
-            return this.suit;
-        }
-    }
-
     public static HashSet<Card> emptyDeck() {
         return new HashSet<Card>();
     }

@@ -21,9 +21,12 @@ public class Game {
     }
 
     public void deal() {
+        // TODO - Implement deal logic.
         for (Player p : players) {
-            for (Deck.Suit s : Deck.Suit.values()) {
-
+            for (int i = 0; i < 3; ++i) {
+                p.addRandomFaceCard();
+                p.addRandomHandCard();
+                p.addRandomHiddenCard();
             }
         }
     }

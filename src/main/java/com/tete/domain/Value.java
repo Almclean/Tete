@@ -1,8 +1,28 @@
 package com.tete.domain;
 
-public class Value implements Comparable {
+public enum Value {
+    TWO("2"),
+    THREE("3"),
+    FOUR("4"),
+    FIVE("5"),
+    SIX("6"),
+    SEVEN("7"),
+    EIGHT("8"),
+    NINE("9"),
+    TEN("10"),
+    JACK("11"),
+    QUEEN("12"),
+    KING("13"),
+    ACE("14");
+
+    private final String value;
+
+    Value(String s) {
+        this.value = s;
+    }
+
     @Override
-    public int compareTo(Object o) {
-        return 0;
+    public String toString() {
+        return this.value;
     }
 }

@@ -42,7 +42,6 @@ public class Player {
     }
 
     public void addFaceCard(final Card card) {
-        // TODO - Add validation logic here.
         this.faceCards.add(card);
     }
 
@@ -57,5 +56,15 @@ public class Player {
     public void addHandCard(final Card card) {
         // TODO - Add validation logic here.
         this.handCards.add(card);
+    }
+
+    public void addRandomFaceCard() {
+    }
+
+    public void addRandomHandCard() {
+    }
+
+    public void addRandomHiddenCard() {
+
     }
 }

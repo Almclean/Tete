@@ -7,9 +7,9 @@ public class Card {
 
     private final Value value;
     private final DeckAction action;
-    private final Deck.Suit suit;
+    private final Suit suit;
 
-    public Card(final Deck.Suit suit, final Value value, final DeckAction action) {
+    public Card(final Suit suit, final Value value, final DeckAction action) {
         this.value = value;
         this.suit = suit;
         this.action = action;
