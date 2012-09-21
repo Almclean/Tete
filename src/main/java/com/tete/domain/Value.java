@@ -15,6 +15,7 @@ public enum Value {
     KING("13"),
     ACE("14");
 
+    public static int valueArrayLength = Value.values().length;
     private final String value;
 
     Value(String s) {

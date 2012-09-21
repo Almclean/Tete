@@ -6,6 +6,8 @@ public enum Suit {
     DIAMOND("D"),
     HEART("H");
 
+    public static int suitArrayLength = Suit.values().length;
+
     private final String suit;
 
     Suit(String suit) {

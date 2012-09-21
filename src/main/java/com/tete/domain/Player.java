@@ -2,6 +2,7 @@ package com.tete.domain;
 
 import java.util.HashSet;
 import java.util.List;
+import java.util.Random;
 import java.util.Set;
 
 public class Player {
@@ -58,13 +59,22 @@ public class Player {
         this.handCards.add(card);
     }
 
+    private Card getRandomCard() {
+        Random prng = new Random(System.nanoTime());
+        return (new Card(Suit.values()[prng.nextInt(Suit.suitArrayLength)],
+                Value.values()[prng.nextInt(Value.valueArrayLength)],
+                new DeckAction()));
+    }
+
     public void addRandomFaceCard() {
+        this.faceCards.add(getRandomCard());
     }
 
     public void addRandomHandCard() {
+        this.handCards.add(getRandomCard());
     }
 
     public void addRandomHiddenCard() {
-
+        this.hiddenCards.add(getRandomCard());
     }
 }
