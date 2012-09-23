@@ -1,20 +1,17 @@
 package com.tete.domain;
 
-import java.util.HashSet;
 import java.util.Set;
 
-public abstract class Deck {
+public interface Deck {
 
-    public static HashSet<Card> emptyDeck() {
-        return new HashSet<Card>();
-    }
+    public void addCard(final Card card);
 
-    abstract public void addCard(final Card card);
+    public void shuffleNewDeck();
 
-    abstract public void addCards(final Set<Card> cards);
+    public void addCards(final Set<Card> cards);
 
-    abstract public Boolean canAddCardToCurrentDeck(final Card card);
+    public Boolean canAddCardToCurrentDeck(final Card card);
 
-    abstract public Integer size();
+    public Integer size();
 
 }

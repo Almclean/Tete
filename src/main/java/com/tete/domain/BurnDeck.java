@@ -1,20 +1,25 @@
 package com.tete.domain;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Set;
 
-public class BurnDeck extends Deck {
+public class BurnDeck implements Deck {
 
-    private final Set<Card> cards;
+    private final List<Card> cards;
     private Value currentMax;
 
-    public BurnDeck(final Set<Card> cards) {
-        this.cards = cards;
-        this.currentMax = Value.ACE;
+    public BurnDeck() {
+        this.cards = new ArrayList<>();
     }
 
     @Override
     public void addCard(final Card card) {
         this.cards.add(card);
+    }
+
+    @Override
+    public void shuffleNewDeck() {
     }
 
     @Override

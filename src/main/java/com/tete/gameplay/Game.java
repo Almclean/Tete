@@ -16,8 +16,8 @@ public class Game {
     public Game(TeteRules rules, Set<Player> players) {
         this.rules = rules;
         this.players = players;
-        burnDeck = new BurnDeck(Deck.emptyDeck());
-        remainingDeck = new RemainingDeck(Deck.emptyDeck());
+        burnDeck = new BurnDeck();
+        remainingDeck = new RemainingDeck();
     }
 
     public void deal() {

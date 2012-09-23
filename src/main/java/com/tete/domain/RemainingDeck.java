@@ -1,19 +1,38 @@
 package com.tete.domain;
 
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
 import java.util.Set;
 
-public class RemainingDeck extends Deck {
+public class RemainingDeck implements Deck {
 
-    private final Set<Card> cards;
+    private final List<Card> cards;
 
-    public RemainingDeck(final Set<Card> cards) {
-        this.cards = cards;
+    public RemainingDeck() {
+        cards = new ArrayList<>();
+
+        for (Suit s : Suit.values()) {
+            for (Value v : Value.values()) {
+                cards.add(new Card(s, v));
+            }
+        }
+
+        Collections.shuffle(cards);
 
     }
 
     @Override
     public void addCard(final Card card) {
         this.cards.add(card);
+    }
+
+    @Override
+    public void shuffleNewDeck() {
+
+        List<Card> cardList = new ArrayList<>();
+        Collections.shuffle(cardList);
+
     }
 
     @Override
