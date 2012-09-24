@@ -14,4 +14,6 @@ public interface Deck {
 
     public Integer size();
 
+    public Card dealCard();
+
 }

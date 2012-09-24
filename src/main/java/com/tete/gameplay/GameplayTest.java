@@ -26,15 +26,13 @@ public class GameplayTest {
         Game newGame = new Game(TeteRules.STANDARD, players);
         newGame.deal();
 
-        int cardAccumulator = 0;
         for (Player p : newGame.getPlayers()) {
             assertThat(p.getHiddenCards().size(), is(3));
             assertThat(p.getFaceCards().size(), is(3));
             assertThat(p.getHandCards().size(), is(3));
-            cardAccumulator += 9;
         }
 
         assertThat(newGame.getBurnDeck().size(), is(0));
-        assertThat(newGame.getRemainingDeck().size(), is(50 - (newGame.getPlayers().size() * 9)));
+        assertThat(newGame.getRemainingDeck().size(), is(52 - (newGame.getPlayers().size() * (3 * newGame.getPlayers().size()))));
     }
 }

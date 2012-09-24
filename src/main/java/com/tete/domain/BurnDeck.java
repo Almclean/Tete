@@ -36,4 +36,9 @@ public class BurnDeck implements Deck {
     public Integer size() {
         return cards.size();
     }
+
+    @Override
+    public Card dealCard() {
+        return this.cards.remove(0);
+    }
 }

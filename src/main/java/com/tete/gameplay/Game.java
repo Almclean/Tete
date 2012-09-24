@@ -24,9 +24,9 @@ public class Game {
         // TODO - Implement deal logic.
         for (Player p : players) {
             for (int i = 0; i < 3; ++i) {
-                p.addRandomFaceCard();
-                p.addRandomHandCard();
-                p.addRandomHiddenCard();
+                p.addRandomFaceCard(remainingDeck.dealCard());
+                p.addRandomHandCard(remainingDeck.dealCard());
+                p.addRandomHiddenCard(remainingDeck.dealCard());
             }
         }
     }

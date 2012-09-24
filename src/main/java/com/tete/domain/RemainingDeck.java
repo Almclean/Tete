@@ -22,6 +22,10 @@ public class RemainingDeck implements Deck {
 
     }
 
+    public Card dealCard() {
+        return this.cards.remove(0);
+    }
+
     @Override
     public void addCard(final Card card) {
         this.cards.add(card);
