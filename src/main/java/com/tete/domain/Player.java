@@ -30,15 +30,15 @@ public class Player {
         return handCards;
     }
 
-    public void addRandomFaceCard(final Card card) {
+    public void addFaceCard(final Card card) {
         this.faceCards.add(card);
     }
 
-    public void addRandomHandCard(final Card card) {
+    public void addHandCard(final Card card) {
         this.handCards.add(card);
     }
 
-    public void addRandomHiddenCard(final Card card) {
+    public void addHiddenCard(final Card card) {
         this.hiddenCards.add(card);
     }
 }

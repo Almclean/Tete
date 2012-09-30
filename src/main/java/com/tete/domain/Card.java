@@ -3,7 +3,7 @@ package com.tete.domain;
 import org.apache.commons.lang.builder.EqualsBuilder;
 import org.apache.commons.lang.builder.HashCodeBuilder;
 
-public class Card {
+public class Card implements Comparable<Card> {
 
     private final Value value;
     private final Suit suit;
@@ -36,5 +36,10 @@ public class Card {
                 .append(this.suit, rhs.suit)
                 .append(this.value, rhs.value)
                 .isEquals();
+    }
+
+    @Override
+    public int compareTo(Card o) {
+        return Integer.compare(this.value.getValue(), o.value.getValue());
     }
 }

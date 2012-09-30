@@ -21,12 +21,11 @@ public class Game {
     }
 
     public void deal() {
-        // TODO - Implement deal logic.
         for (Player p : players) {
             for (int i = 0; i < 3; ++i) {
-                p.addRandomFaceCard(remainingDeck.dealCard());
-                p.addRandomHandCard(remainingDeck.dealCard());
-                p.addRandomHiddenCard(remainingDeck.dealCard());
+                p.addFaceCard(remainingDeck.dealCard());
+                p.addHandCard(remainingDeck.dealCard());
+                p.addHiddenCard(remainingDeck.dealCard());
             }
         }
     }
